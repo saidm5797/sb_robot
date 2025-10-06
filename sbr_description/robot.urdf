@@ -13,13 +13,13 @@
   <!-- Link camera -->
   <link name="camera">
     <inertial>
-      <origin xyz="-0.0378203 0.00456874 0.0245667" rpy="0 0 0"/>
+      <origin xyz="0.00332022 -0.00129362 0.0538468" rpy="0 0 0"/>
       <mass value="1.523"/>
-      <inertia ixx="0.00586627" ixy="2.22208e-05" ixz="2.4478e-05" iyy="0.00690954" iyz="-0.000252623" izz="0.00284535"/>
+      <inertia ixx="0.00690954" ixy="-2.22208e-05" ixz="0.000252623" iyy="0.00586627" iyz="2.4478e-05" izz="0.00284535"/>
     </inertial>
     <!-- Part camera_parts -->
     <visual>
-      <origin xyz="-0.0378203 0.00456874 0.0245667" rpy="0 -0 0"/>
+      <origin xyz="0.00332022 -0.00129362 0.0538468" rpy="0 -0 0"/>
       <geometry>
         <mesh filename="package://assets/merged/camera_visual.stl"/>
       </geometry>
@@ -28,7 +28,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0378203 0.00456874 0.0245667" rpy="0 -0 0"/>
+      <origin xyz="0.00332022 -0.00129362 0.0538468" rpy="0 -0 0"/>
       <geometry>
         <mesh filename="package://assets/merged/camera_collision.stl"/>
       </geometry>
@@ -43,7 +43,7 @@
     </inertial>
     <!-- Part left_wheel_parts -->
     <visual>
-      <origin xyz="-3.41977e-11 2.60909e-11 -0.0178081" rpy="1.5708 1.5708 0"/>
+      <origin xyz="-3.41977e-11 2.60908e-11 -0.0178081" rpy="-1.5708 -0 3.14159"/>
       <geometry>
         <mesh filename="package://assets/merged/left_wheel_visual.stl"/>
       </geometry>
@@ -52,7 +52,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-3.41977e-11 2.60909e-11 -0.0178081" rpy="1.5708 1.5708 0"/>
+      <origin xyz="-3.41977e-11 2.60908e-11 -0.0178081" rpy="-1.5708 -0 3.14159"/>
       <geometry>
         <mesh filename="package://assets/merged/left_wheel_collision.stl"/>
       </geometry>
@@ -60,7 +60,7 @@
   </link>
   <!-- Joint from camera to left_wheel -->
   <joint name="left_wheel_joint" type="continuous">
-    <origin xyz="0.0265233 0.00796397 -0.0669234" rpy="-1.5708 6.12323e-17 1.5708"/>
+    <origin xyz="-7.50005e-05 0.06305 -0.0376433" rpy="-1.5708 6.12323e-17 3.14159"/>
     <parent link="camera"/>
     <child link="left_wheel"/>
     <axis xyz="0 0 1"/>
@@ -75,7 +75,7 @@
     </inertial>
     <!-- Part right_wheel_parts -->
     <visual>
-      <origin xyz="-3.41977e-11 2.60909e-11 -0.0178081" rpy="1.5708 -1.5708 0"/>
+      <origin xyz="-3.41977e-11 2.60908e-11 -0.0178081" rpy="1.5708 -0 6.12323e-17"/>
       <geometry>
         <mesh filename="package://assets/merged/right_wheel_visual.stl"/>
       </geometry>
@@ -84,7 +84,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-3.41977e-11 2.60909e-11 -0.0178081" rpy="1.5708 -1.5708 0"/>
+      <origin xyz="-3.41977e-11 2.60908e-11 -0.0178081" rpy="1.5708 -0 6.12323e-17"/>
       <geometry>
         <mesh filename="package://assets/merged/right_wheel_collision.stl"/>
       </geometry>
@@ -92,7 +92,7 @@
   </link>
   <!-- Joint from camera to right_wheel -->
   <joint name="right_wheel_joint" type="continuous">
-    <origin xyz="-0.100577 0.00796397 -0.0669234" rpy="-1.5708 -6.12323e-17 -1.5708"/>
+    <origin xyz="-7.50005e-05 -0.06405 -0.0376433" rpy="-1.5708 -6.12323e-17 0"/>
     <parent link="camera"/>
     <child link="right_wheel"/>
     <axis xyz="0 0 1"/>
