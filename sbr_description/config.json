@@ -1,0 +1,45 @@
+{
+  // Onshape URL of the assembly
+  "url": "https://cad.onshape.com/documents/f2e60be8d52c5137ae6cfd25/w/45859e4dbafc73eedc6eb2b0/e/3845b2cc23ef6a34e1afbb9d",
+  
+  // Output format
+  "output_format": "urdf",
+
+  // Parts to ignore (default: {})
+  "ignore": {
+    // Ignore visual for these parts
+    "M3-45_Aluminum Male-Female Threaded Hex Standoff": "visual",
+    "raspberry_pi_4B": "all",
+    "Inline Fuse Holder": "all",
+    "Rocker Switch Round - Red": "all",
+    "L298N_motor_driver": "all",
+    "XL4015_buck_converter": "all",
+    "Mini Breadboard": "all",
+    "INA3221_current_sensor": "all",
+    "GY-521": "all",
+    "nano": "all"
+  },
+
+  // More options available in processors
+  // Override joint properties (default: {})
+  "joint_properties": {
+    // Set the properties for a specific joint
+    "left_wheel_joint": {
+      "type": "continuous"
+    },
+    "right_wheel_joint": {
+      "type": "continuous"
+    }
+  },
+    
+  // Add a dummy base link (default: false)
+  "add_dummy_base_link": true,
+  
+  // Merge STL meshes (default: false)
+  "merge_stls": true,
+  
+  // Simplify STL meshes (default: false)
+  "simplify_stls": true,
+  // Maximum size of the STL files in MB (default: 3)
+  "max_stl_size": 1
+}
